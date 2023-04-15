@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=>, initial-scale=1.0">
-    <title>Document</title>
+    <title>Лабораторная 5. Кривошеев, Гавра</title>
     <link rel="stylesheet" href="main.css">
     <script>
         function ShowSum () {
-            let a = 5154;
-            let b = 7891;
+            let inputA = document.getElementById("numberA");
+            let inputB = document.getElementById("numberB");
+
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+
             let result = a + b;
             alert ("Сумма " + a +  " и " + b + " равна " + result);
         }
@@ -36,7 +41,11 @@
     </header>
 
     <main>
-            <div class="message" onclick="ShowSum()">Сколько будет 5154+7891?</div>
+            <label>Первое число: <input type="number" value="5154" id="numberA"></label><br>
+            <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
+
+
+            <div class="message" onclick="ShowSum()">Найти сумму чисел</div>
             <div class="message" onclick="ShowAuthor()">Узнать, кто автор страницы</div>
 
 
