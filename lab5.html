@@ -61,6 +61,14 @@
             let author = "Авторы страницы: \n Кривошеев Максим Сергеевич, студент ФБИ-11 \n Гавра Владислав Артемович, студент ФБИ-11"
             alert(author);
         }
+
+        function ChangeOutput (buttonNum, backColor, textColor, borderStyle) {
+            let output = document.getElementById("output"); 
+            output.innerHTML = "Нажата кнопка " + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor; 
+            output.style.border = borderStyle; 
+        }
     </script>
     <style>
         .message {
@@ -69,6 +77,13 @@
             padding: 3px;
             margin: 3px;
             cursor: pointer;
+        }
+
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
+
         }
     </style>
 </head>
@@ -87,7 +102,17 @@
             <div class="message" onclick="ShowDel()">Найти деление чисел</div>
             <div class="message" onclick="ShowRaz()">Найти разность чисел</div>
             <div class="message" onclick="ShowUmn()">Найти произведение чисел</div>
+
             <div class="message" onclick="ShowAuthor()">Узнать, кто автор страницы</div>
+
+            <div>
+                <input type="button" value="Кнопка 1" onclick="ChangeOutput(1, 'red', 'yellow', 'dotted')">
+                <input type="button" value="Кнопка 2" onclick="ChangeOutput(2, 'brown', 'orange', 'dashed')">
+                <input type="button" value="Кнопка 3" onclick="ChangeOutput(3, 'green', 'black', 'double')">
+                <input type="button" value="Кнопка 4" onclick="ChangeOutput(4, 'blue', 'gray', 'solid')">
+            </div>
+
+            <div id="output"></div>
 
 
     </main>
